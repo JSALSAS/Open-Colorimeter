@@ -26,12 +26,12 @@ Asegúrate de contar con los siguientes componentes físicos para ensamblar y op
 
 ### 💻 Archivos y software necesarios
 
-| Archivo                                                   | Descripción                                      | Carpeta                |
-|-----------------------------------------------------------|--------------------------------------------------|------------------------|
-| `open_colorimeter_firmware_v0.1.1.zip`                    | Firmware principal del colorímetro               | [`firmware/`](firmware/) |
-| `update-bootloader-arcade_pybadge-v3.14.0.uf2`            | Bootloader v3.14 para PyBadge                    | [`bootloader/`](bootloader/) |
-| `adafruit-circuitpython-pybadge-en_US-7.3.2.uf2`          | CircuitPython v7.3.2 compatible con PyBadge      | [`circuitpython/`](circuitpython/) |
-| Librerías de Adafruit                                     | Librerías necesarias para CircuitPython          | [`libraries/`](libraries/) |
+| Archivo                                                   | Descripción                                      |
+|-----------------------------------------------------------|--------------------------------------------------|
+| `open_colorimeter_firmware_v0.1.1.zip`                    | Firmware principal del colorímetro               |
+| `update-bootloader-arcade_pybadge-v3.14.0.uf2`            | Bootloader v3.14 para PyBadge                    |
+| `adafruit-circuitpython-pybadge-en_US-7.3.2.uf2`          | CircuitPython v7.3.2 compatible con PyBadge      |
+| Librerías de Adafruit                                     | Librerías necesarias para CircuitPython          |
 
 ---
 
