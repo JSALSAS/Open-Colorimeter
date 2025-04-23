@@ -39,7 +39,7 @@ Asegúrate de contar con los siguientes componentes físicos para ensamblar y op
 
 ### 📥 Paso 1: Instalar el firmware del colorímetro
 
-1. Descarga el archivo [`open_colorimeter_firmware_v0.1.1.zip`](firmware/open_colorimeter_firmware_v0.1.1.zip).
+1. Descarga el archivo [`open_colorimeter_firmware_v0.1.1.zip`](firmware/open_colorimeter_firmware_v0.1.1).
 2. Extrae los archivos en tu computadora.
 3. Conecta el PyBadge: debe aparecer una unidad llamada `CIRCUITPY`.
 4. Elimina cualquier archivo anterior dentro de `CIRCUITPY`.
