@@ -87,7 +87,3 @@ Todos los archivos requeridos se encuentran organizados en las siguientes carpet
 Este proyecto se basa en el diseño de código abierto desarrollado por [IO Rodeo](https://iorodeo.com).  
 Repositorio oficial del firmware original:  
 🔗 [https://github.com/iorodeo/open_colorimeter_firmware/releases](https://github.com/iorodeo/open_colorimeter_firmware/releases)
-
----
-
----
