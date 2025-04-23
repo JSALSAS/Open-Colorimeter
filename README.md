@@ -91,10 +91,5 @@ Repositorio original: [https://github.com/iorodeo/colorimeter](https://github.co
 
 ---
 
-## 📩 Soporte
-
-¿Tienes dudas o sugerencias? Puedes abrir un **Issue** en este repositorio o enviar un **Pull Request** para contribuir con mejoras.
-
----
 
 
