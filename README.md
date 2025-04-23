@@ -6,7 +6,7 @@ Bienvenido/a al repositorio oficial de instalación del **Open Colorimeter de IO
 
 ## 📸 Modelo del dispositivo
 
-![Modelo del Open Colorimeter](images/open_colorimeter_modelo.jpg)
+![Modelo del Open Colorimeter](image_1.png)
 
 ---
 
