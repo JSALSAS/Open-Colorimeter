@@ -6,7 +6,7 @@ Este repositorio contiene todos los archivos necesarios y una guía detallada pa
 
 ## 📸 Modelo del dispositivo
 
-<img src="images/image_1.png" alt="Open Colorimeter" width="500"/>
+<img src="image_1.png" alt="Open Colorimeter" width="500"/>
 
 ---
 
