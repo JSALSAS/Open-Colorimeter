@@ -1,105 +1,99 @@
 # 🎨 Open Colorimeter - Guía de Instalación y Configuración
 
-Bienvenido/a al repositorio oficial de instalación del **Open Colorimeter de IO Rodeo**, un dispositivo portátil para análisis colorimétrico basado en hardware abierto. Este proyecto está diseñado para facilitar su uso en aplicaciones educativas, científicas y de investigación.
+Este repositorio contiene todos los archivos necesarios y una guía detallada para la instalación del **Open Colorimeter de IO Rodeo**, un dispositivo portátil de código abierto diseñado para realizar análisis colorimétricos con precisión, ideal para aplicaciones científicas, educativas y de laboratorio.
 
 ---
 
 ## 📸 Modelo del dispositivo
 
-![Modelo del Open Colorimeter](image_1.png)
+<img src="images/image_1.png" alt="Open Colorimeter" width="500"/>
 
 ---
 
-## 📦 Requisitos del sistema
+## 📦 Requisitos
 
-### 🔧 Componentes del Open Colorimeter
+### 🧰 Componentes de hardware
 
-- Adafruit PyBadge (versión original o LC)
-- Sensor de luz **TSL2591**
-- Pantalla TFT incorporada en el PyBadge
-- Fuente de alimentación por USB o batería LiPo
-- Impresora 3D para la carcasa (opcional pero recomendada)
-- Cable USB **con transferencia de datos**
+Asegúrate de contar con los siguientes componentes físicos para ensamblar y operar correctamente el colorímetro:
 
-### 🖥️ Software y archivos necesarios
-
-- [Arduino IDE](https://www.arduino.cc/en/software) (opcional, si se desea cargar firmware personalizado)
-- Bootloader actualizado: `v3.14`
-- CircuitPython versión: `7.3.2`
-- Firmware del colorímetro (`.zip`)
-- Librerías de Adafruit requeridas
+- ✅ **Adafruit PyBadge** (modelo original o LC)
+- ✅ **Sensor TSL2591** (sensor de luz digital)
+- ✅ Pantalla TFT (integrada en el PyBadge)
+- ✅ Cable USB **de datos** (no solo carga)
+- ✅ Carcasa impresa en 3D (opcional pero altamente recomendada)
 
 ---
 
-## 📁 Archivos disponibles en este repositorio
+### 💻 Archivos y software necesarios
 
-- [`firmware/`](firmware/) → Última versión del firmware del colorímetro (`.zip`)
-- [`bootloader/`](bootloader/) → Archivo `.uf2` para actualizar el bootloader
-- [`circuitpython/`](circuitpython/) → Archivo `.uf2` de CircuitPython v7.3.2
-- [`libraries/`](libraries/) → Librerías necesarias para CircuitPython
-- [`images/`](images/) → Imágenes de referencia del dispositivo y su configuración
-
----
-
-## 🔄 Instalación del firmware
-
-### 📥 Paso 1: Descargar y copiar el firmware
-
-1. Descargue el archivo `.zip` desde [`firmware/`](firmware/).
-2. Extraiga el contenido del `.zip` en su computadora.
-3. Conecte el PyBadge a la computadora: debe aparecer como unidad `CIRCUITPY`.
-4. Elimine cualquier firmware anterior.
-5. Copie los archivos nuevos del firmware extraído a la unidad `CIRCUITPY`.
+| Archivo                                                   | Descripción                                      | Carpeta                |
+|-----------------------------------------------------------|--------------------------------------------------|------------------------|
+| `open_colorimeter_firmware_v0.1.1.zip`                    | Firmware principal del colorímetro               | [`firmware/`](firmware/) |
+| `update-bootloader-arcade_pybadge-v3.14.0.uf2`            | Bootloader v3.14 para PyBadge                    | [`bootloader/`](bootloader/) |
+| `adafruit-circuitpython-pybadge-en_US-7.3.2.uf2`          | CircuitPython v7.3.2 compatible con PyBadge      | [`circuitpython/`](circuitpython/) |
+| Librerías de Adafruit                                     | Librerías necesarias para CircuitPython          | [`libraries/`](libraries/) |
 
 ---
 
-## 🔃 Actualización del bootloader y CircuitPython
+## 🔧 Guía de instalación
 
-> ⚠️ **Importante:** Para el funcionamiento correcto del colorímetro, es necesario que el PyBadge utilice el bootloader v3.14 y CircuitPython 7.3.2.
+### 📥 Paso 1: Instalar el firmware del colorímetro
 
-### 🛠️ Paso 2: Entrar en modo bootloader
-
-1. Conecte el PyBadge a su PC con un cable USB **de datos**.
-2. Presione dos veces rápidamente el botón `RESET`.
-3. El dispositivo mostrará una pantalla azul o verde.
-4. Aparecerá una unidad nueva llamada `BADGEBOOT` o `ARCADE`.
+1. Descarga el archivo [`open_colorimeter_firmware_v0.1.1.zip`](firmware/open_colorimeter_firmware_v0.1.1.zip).
+2. Extrae los archivos en tu computadora.
+3. Conecta el PyBadge: debe aparecer una unidad llamada `CIRCUITPY`.
+4. Elimina cualquier archivo anterior dentro de `CIRCUITPY`.
+5. Copia todos los archivos extraídos directamente a la unidad `CIRCUITPY`.
 
 ---
 
-### 🧱 Paso 3: Instalar Bootloader v3.14
+## 🔁 Actualización del bootloader y CircuitPython
 
-1. Descargue el archivo `.uf2` desde [`bootloader/`](bootloader/).
-2. Arrastre el archivo `update-bootloader-arcade_pybadge-v3.14.0.uf2` a la unidad `BADGEBOOT`.
-3. El PyBadge se reiniciará automáticamente.
+> ⚠️ Importante: Este paso es **obligatorio** si tu dispositivo no tiene las versiones requeridas. Solo es necesario hacerlo una vez, a menos que actualices el sistema en el futuro.
+
+### 🛠️ Paso 2: Activar el modo bootloader
+
+1. Conecta el PyBadge a tu computadora usando un **cable USB de datos**.
+2. Presiona dos veces rápidamente el botón blanco `RESET`.
+3. Verás que la pantalla cambia (color azul o verde) y aparece una nueva unidad: `BADGEBOOT` o `ARCADE`.
+
+---
+
+### 🧱 Paso 3: Instalar el Bootloader v3.14
+
+1. Descarga [`update-bootloader-arcade_pybadge-v3.14.0.uf2`](bootloader/update-bootloader-arcade_pybadge-v3.14.0.uf2).
+2. Arrastra el archivo `.uf2` a la unidad `BADGEBOOT`.
+3. El dispositivo se reiniciará automáticamente.
 
 ---
 
 ### 🐍 Paso 4: Instalar CircuitPython 7.3.2
 
-1. Presione dos veces el botón `RESET` para entrar nuevamente a `BADGEBOOT`.
-2. Descargue el archivo `.uf2` desde [`circuitpython/`](circuitpython/).
-3. Arrastre `adafruit-circuitpython-pybadge-en_US-7.3.2.uf2` a `BADGEBOOT`.
-4. El PyBadge se reiniciará y se mostrará una nueva unidad llamada `CIRCUITPY`.
+1. Si es necesario, vuelve a entrar en `BADGEBOOT` presionando `RESET` dos veces.
+2. Descarga [`adafruit-circuitpython-pybadge-en_US-7.3.2.uf2`](circuitpython/adafruit-circuitpython-pybadge-en_US-7.3.2.uf2).
+3. Copia el archivo `.uf2` a la unidad `BADGEBOOT`.
+4. El dispositivo se reiniciará y aparecerá como `CIRCUITPY`.
 
 ---
 
-## ✅ Paso 5: Verificación
+## ✅ Paso 5: Verificar instalación
 
-- Si todo ha salido bien, debe ver una unidad `CIRCUITPY` en su PC.
-- El colorímetro está ahora listo para usarse con el nuevo firmware.
+- Debes ver una unidad llamada `CIRCUITPY` en tu computadora.
+- El firmware debe estar cargado y el colorímetro encenderá mostrando su interfaz.
+- ¡Listo! Ya puedes usar tu **Open Colorimeter**.
 
 ---
 
 ## 📚 Créditos
 
-Proyecto basado en el diseño de código abierto de [IO Rodeo](https://iorodeo.com)  
-Repositorio oficial de código original: [https://github.com/iorodeo/colorimeter](https://github.com/iorodeo/colorimeter)
+Este proyecto se basa en el diseño de código abierto desarrollado por [IO Rodeo](https://iorodeo.com).  
+Repositorio original: [https://github.com/iorodeo/colorimeter](https://github.com/iorodeo/colorimeter)
 
 ---
 
-## 🧪 Contacto y soporte
+## 📩 Soporte
 
-Para reportar errores, sugerencias o contribuir, puedes crear un **Issue** o enviar un **Pull Request** a este repositorio.
+¿Tienes dudas o sugerencias? Puedes abrir un **Issue** en este repositorio o enviar un **Pull Request** para contribuir con mejoras.
 
 ---
 
