@@ -1,70 +1,106 @@
-# Open Colorimeter - Guía de Instalación
+# 🎨 Open Colorimeter - Guía de Instalación y Configuración
 
-Este repositorio contiene los pasos y archivos necesarios para instalar y ejecutar el **Open Colorimeter de IO Rodeo** usando una placa Adafruit PyBadge.
-
----
-
-## 📦 Requisitos
-
-- Arduino IDE instalado (opcional, si vas a cargar otro firmware)
-- Cable USB que permita transferencia de datos
-- Archivos del firmware (.zip)
-- Bootloader v3.14
-- CircuitPython 7.3.2
-- Librerías de Adafruit necesarias
+Bienvenido/a al repositorio oficial de instalación del **Open Colorimeter de IO Rodeo**, un dispositivo portátil para análisis colorimétrico basado en hardware abierto. Este proyecto está diseñado para facilitar su uso en aplicaciones educativas, científicas y de investigación.
 
 ---
 
-## ⬇️ Descarga y actualización del firmware
+## 📸 Modelo del dispositivo
 
-### Instrucciones:
+![Modelo del Open Colorimeter](images/open_colorimeter_modelo.jpg)
 
-1. Descargue el archivo `.zip` con la **última versión del firmware** (disponible en la carpeta `firmware/` de este repositorio o desde el sitio oficial).
+---
+
+## 📦 Requisitos del sistema
+
+### 🔧 Componentes del Open Colorimeter
+
+- Adafruit PyBadge (versión original o LC)
+- Sensor de luz **TSL2591**
+- Pantalla TFT incorporada en el PyBadge
+- Fuente de alimentación por USB o batería LiPo
+- Impresora 3D para la carcasa (opcional pero recomendada)
+- Cable USB **con transferencia de datos**
+
+### 🖥️ Software y archivos necesarios
+
+- [Arduino IDE](https://www.arduino.cc/en/software) (opcional, si se desea cargar firmware personalizado)
+- Bootloader actualizado: `v3.14`
+- CircuitPython versión: `7.3.2`
+- Firmware del colorímetro (`.zip`)
+- Librerías de Adafruit requeridas
+
+---
+
+## 📁 Archivos disponibles en este repositorio
+
+- [`firmware/`](firmware/) → Última versión del firmware del colorímetro (`.zip`)
+- [`bootloader/`](bootloader/) → Archivo `.uf2` para actualizar el bootloader
+- [`circuitpython/`](circuitpython/) → Archivo `.uf2` de CircuitPython v7.3.2
+- [`libraries/`](libraries/) → Librerías necesarias para CircuitPython
+- [`images/`](images/) → Imágenes de referencia del dispositivo y su configuración
+
+---
+
+## 🔄 Instalación del firmware
+
+### 📥 Paso 1: Descargar y copiar el firmware
+
+1. Descargue el archivo `.zip` desde [`firmware/`](firmware/).
 2. Extraiga el contenido del `.zip` en su computadora.
-3. Conecte el PyBadge a su PC y asegúrese de que aparece como unidad `CIRCUITPY`.
-4. **Elimine cualquier firmware anterior** de la unidad `CIRCUITPY`.
-5. Copie los nuevos archivos del firmware a la unidad `CIRCUITPY`.
+3. Conecte el PyBadge a la computadora: debe aparecer como unidad `CIRCUITPY`.
+4. Elimine cualquier firmware anterior.
+5. Copie los archivos nuevos del firmware extraído a la unidad `CIRCUITPY`.
 
 ---
 
-## 🧰 Instalación del Bootloader y CircuitPython
+## 🔃 Actualización del bootloader y CircuitPython
 
-> Antes de instalar el firmware del colorímetro, asegúrese de que su PyBadge tiene la versión correcta del bootloader y CircuitPython.
+> ⚠️ **Importante:** Para el funcionamiento correcto del colorímetro, es necesario que el PyBadge utilice el bootloader v3.14 y CircuitPython 7.3.2.
 
-### 🛠️ Paso 1: Cambiar al modo de arranque (bootloader mode)
+### 🛠️ Paso 2: Entrar en modo bootloader
 
-1. 🔌 Conecte su PyBadge a la computadora con un cable USB **de datos** (no solo de carga).
-2. 🔁 Presione **dos veces rápidamente** el botón `RESET` (el botón blanco pequeño en la parte posterior o lateral del PyBadge).
-3. La pantalla debería cambiar a color verde o azul.
-4. En su PC aparecerá una nueva unidad llamada `BADGEBOOT` o `ARCADE`.
-
----
-
-### 🧱 Paso 2: Instalar el Bootloader v3.14
-
-1. Descargue el archivo del bootloader desde este enlace:
-   - 🔗 [`update-bootloader-arcade_pybadge-v3.14.0.uf2`](bootloader/update-bootloader-arcade_pybadge-v3.14.0.uf2)
-2. Arrastre ese archivo `.uf2` a la unidad `BADGEBOOT`.
-3. El PyBadge se reiniciará automáticamente después de copiar el archivo.
+1. Conecte el PyBadge a su PC con un cable USB **de datos**.
+2. Presione dos veces rápidamente el botón `RESET`.
+3. El dispositivo mostrará una pantalla azul o verde.
+4. Aparecerá una unidad nueva llamada `BADGEBOOT` o `ARCADE`.
 
 ---
 
-### 🐍 Paso 3: Instalar CircuitPython 7.3.2
+### 🧱 Paso 3: Instalar Bootloader v3.14
 
-1. Presione dos veces nuevamente el botón `RESET` para volver al modo `BADGEBOOT`.
-2. Descargue CircuitPython desde este enlace:
-   - 🔗 [`adafruit-circuitpython-pybadge-en_US-7.3.2.uf2`](circuitpython/adafruit-circuitpython-pybadge-en_US-7.3.2.uf2)
-3. Arrastre ese archivo `.uf2` a la unidad `BADGEBOOT`.
-4. El PyBadge se reiniciará y aparecerá una nueva unidad llamada `CIRCUITPY`.
+1. Descargue el archivo `.uf2` desde [`bootloader/`](bootloader/).
+2. Arrastre el archivo `update-bootloader-arcade_pybadge-v3.14.0.uf2` a la unidad `BADGEBOOT`.
+3. El PyBadge se reiniciará automáticamente.
 
 ---
 
-### ✅ Paso 4: Verificar instalación
+### 🐍 Paso 4: Instalar CircuitPython 7.3.2
 
-- Si todo está correcto, su computadora mostrará una unidad llamada `CIRCUITPY`.
-- El PyBadge estará listo para recibir el firmware del colorímetro.
+1. Presione dos veces el botón `RESET` para entrar nuevamente a `BADGEBOOT`.
+2. Descargue el archivo `.uf2` desde [`circuitpython/`](circuitpython/).
+3. Arrastre `adafruit-circuitpython-pybadge-en_US-7.3.2.uf2` a `BADGEBOOT`.
+4. El PyBadge se reiniciará y se mostrará una nueva unidad llamada `CIRCUITPY`.
 
 ---
 
-## 📂 Estructura del repositorio
+## ✅ Paso 5: Verificación
+
+- Si todo ha salido bien, debe ver una unidad `CIRCUITPY` en su PC.
+- El colorímetro está ahora listo para usarse con el nuevo firmware.
+
+---
+
+## 📚 Créditos
+
+Proyecto basado en el diseño de código abierto de [IO Rodeo](https://iorodeo.com)  
+Repositorio oficial de código original: [https://github.com/iorodeo/colorimeter](https://github.com/iorodeo/colorimeter)
+
+---
+
+## 🧪 Contacto y soporte
+
+Para reportar errores, sugerencias o contribuir, puedes crear un **Issue** o enviar un **Pull Request** a este repositorio.
+
+---
+
 
