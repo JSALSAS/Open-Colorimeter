@@ -1,10 +1,10 @@
-# 🎨 Open Colorimeter - Guía de Instalación y Configuración
+# Open Colorimeter - Guía de Instalación y Configuración
 
 Este repositorio contiene todos los archivos necesarios y una guía detallada para instalar y configurar el **Open Colorimeter de IO Rodeo**, un dispositivo portátil de código abierto diseñado para realizar análisis colorimétricos con precisión. Es ideal para uso educativo, científico y experimental.
 
 ---
 
-## 📸 Modelo del dispositivo
+## Modelo del dispositivo
 
 <img src="image_1.png" alt="Open Colorimeter" width="500"/>
 
@@ -22,7 +22,7 @@ Asegúrate de contar con los siguientes elementos físicos:
 - ✅ Cable USB **de datos** (no solo carga)
 - ✅ Carcasa impresa en 3D (opcional pero recomendada)
 
-### 💻 Archivos incluidos en este repositorio
+### Archivos incluidos en este repositorio
 
 Todos los archivos requeridos se encuentran organizados en las siguientes carpetas:
 
@@ -34,7 +34,7 @@ Todos los archivos requeridos se encuentran organizados en las siguientes carpet
 
 ---
 
-## 🔧 Instrucciones de instalación
+## Instrucciones de instalación
 
 ###  Paso 1: Instalar el firmware del colorímetro
 
@@ -49,7 +49,7 @@ Todos los archivos requeridos se encuentran organizados en las siguientes carpet
 
 > ⚠️ Este proceso es **necesario si tu PyBadge no tiene el bootloader o CircuitPython correctos**.
 
-### 🛠️ Paso 2: Activar el modo bootloader
+### Paso 2: Activar el modo bootloader
 
 1. Conecta el PyBadge a tu PC usando un cable USB **de datos**.
 2. Presiona dos veces rápidamente el botón `RESET` en la parte posterior o lateral.
@@ -57,7 +57,7 @@ Todos los archivos requeridos se encuentran organizados en las siguientes carpet
 
 ---
 
-###  Paso 3: Instalar bootloader v3.14
+### Paso 3: Instalar bootloader v3.14
 
 1. Ve a la carpeta `bootloader v3.14/`.
 2. Copia el archivo `.uf2` que está ahí a la unidad `BADGEBOOT`.
@@ -65,7 +65,7 @@ Todos los archivos requeridos se encuentran organizados en las siguientes carpet
 
 ---
 
-###  Paso 4: Instalar CircuitPython 7.3.2
+### Paso 4: Instalar CircuitPython 7.3.2
 
 1. Vuelve a poner el PyBadge en modo bootloader si es necesario (presionando `RESET` dos veces).
 2. Ve a la carpeta `circuitpython 7.3.2/`.
@@ -74,7 +74,7 @@ Todos los archivos requeridos se encuentran organizados en las siguientes carpet
 
 ---
 
-##  Paso 5: Verificar
+## Paso 5: Verificar
 
 - La unidad `CIRCUITPY` debe estar visible en tu PC.
 - El PyBadge debe mostrar la interfaz del colorímetro en su pantalla.
@@ -82,7 +82,7 @@ Todos los archivos requeridos se encuentran organizados en las siguientes carpet
 
 ---
 
-##  Créditos
+## Créditos
 
 Este proyecto se basa en el diseño de código abierto desarrollado por [IO Rodeo](https://iorodeo.com).  
 Repositorio oficial del firmware original:  
